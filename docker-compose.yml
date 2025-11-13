@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    container_name: task-backend
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - MONGO_URI=mongodb://root:pass123@mongo:27017/taskdb?authSource=admin
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    container_name: task-mongo
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=pass123
+    ports:
+      - "27017:27017"
