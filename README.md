@@ -24,29 +24,6 @@ This project demonstrates how to build and containerize a backend API with a rea
 - Clean MVC folder structure
 - Uses environment variables via `.env`
 
----
-
-## 📂 Folder Structure
-
-node-crud-docker/
-│
-├── src/
-│ ├── app.js
-│ ├── config/
-│ │ └── database.js
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│
-├── Dockerfile
-├── docker-compose.yml
-├── package.json
-├── .gitignore
-└── README.md
-
-
----
-
 ## 🐳 Run the App Using Docker (Recommended)
 
 This project is fully containerized.  
